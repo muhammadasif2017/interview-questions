@@ -10,6 +10,16 @@ function pairwise(arr, arg) {
   if (arr.length === 0) {
     return 0;
   }
+
+  const checkNum = (x) => typeof x !== 'number';
+  if (arr.some(x => checkNum(x))) {
+    throw new Error('One of the items in parameter 1 does not evaluate to a number.');
+  }
+
+  if (checkNum(arg)) {
+    throw new Error('Parameter 2 does not evaluate to a number.');
+  }
+
   let map = {};
   let sum = 0;
   for (let i = 0; i < arr.length; i += 1) {

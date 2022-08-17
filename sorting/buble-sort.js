@@ -12,9 +12,9 @@ function bubbleSort(array) {
   }
 
   for (let i = 0; i < copyArr.length; i += 1) {
-    for (let j = i + 1; j < copyArr.length; j += 1) {
-      if (copyArr[i] > copyArr[j]) {
-        swap(i, j);
+    for (let j = 0; j < (copyArr.length - 1 - i); j += 1) {
+      if (copyArr[j] > copyArr[j + 1]) {
+        swap(j, j + 1);
       }
     }
   }

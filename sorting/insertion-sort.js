@@ -1,5 +1,7 @@
 function insertionSort(array) {
-  if (!Array.isArray(array)) throw new Error('Parameter does not evaluate to an array');
+  if (!Array.isArray(array)) {
+    throw new Error("Parameter does not evaluate to an array");
+  }
 
   const newArr = array.slice();
 
@@ -10,7 +12,7 @@ function insertionSort(array) {
   }
 
   for (let i = 0; i < newArr.length; i += 1) {
-    let elem = newArr[i];
+    const elem = newArr[i];
     for (let j = 0; j <= i; j += 1) {
       if (elem < newArr[j]) {
         swap(i, j);

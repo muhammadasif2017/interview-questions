@@ -5,11 +5,10 @@ function moveZeroes(nums) {
       const temp = nums[i];
       nums[i] = nums[index];
       nums[index] = temp;
-      console.log(nums);
       index++;
     }
   }
-  console.log(nums);
+  console.log("Nums:", nums);
   return nums;
 }
 

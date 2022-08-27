@@ -36,7 +36,16 @@ function reverse(str) {
         s[strLength - i] = s[i];
         s[i] = temp;
     }
-};
+  };
 */
 
-console.log(reverse("Hi My name is Muhammad Asif"));
+// Reverse a string using recursion
+function recursiveReverse(str, length) {
+  if (length < 0) {
+    return "";
+  }
+  return str[length] + recursiveReverse(str, length - 1);
+}
+
+const str = "Hi My name is Muhammad Asif";
+console.log(recursiveReverse(str, str.length - 1));
